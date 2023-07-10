@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "28718b5f-7a0a-4947-b39e-d86f2278f569",
+		"name": "mongoose nestjs example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13144892"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/services",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"newvax\",\n    \"what\":\"vaxy does its vaxy thang\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/services/64abf8b6cadb64b3fba5cad0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/services/64abf8b6cadb64b3fba5cad0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"services",
+						"64abf8b6cadb64b3fba5cad0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/services/64a701fbf8c7186bea689d64",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"(taylor's version) newvax\",\n    \"what\":\"(taylor's version) vaxy does its vaxy thang\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/services/64a701fbf8c7186bea689d64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"services",
+						"64a701fbf8c7186bea689d64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/services/64abf8b6cadb64b3fba5cad0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/services/64abf8b6cadb64b3fba5cad0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"services",
+						"64abf8b6cadb64b3fba5cad0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
