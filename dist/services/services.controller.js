@@ -22,16 +22,17 @@ let ServicesController = exports.ServicesController = class ServicesController {
     async fetchAll() {
         return await this.servicesService.findAll();
     }
-    fetchOne(id) {
+    async fetchOne(id) {
+        return await this.servicesService.findOne(id);
     }
-    removeVaccine(id) {
-        return { message: `Your id is ${id}` };
+    async removeVaccine(id) {
+        return await this.servicesService.remove(id);
     }
     updateVaccine(name, what, id) {
-        return { data: { name, what } };
+        return this.servicesService.update(id, name, what);
     }
-    addVaccine(name, what) {
-        return { data: { name, what } };
+    async addVaccine(name, what) {
+        return await this.servicesService.add(name, what);
     }
 };
 __decorate([
@@ -45,19 +46,19 @@ __decorate([
     __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ServicesController.prototype, "fetchOne", null);
 __decorate([
     (0, common_1.Delete)(":id"),
     __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ServicesController.prototype, "removeVaccine", null);
 __decorate([
     (0, common_1.Patch)(":id"),
-    __param(0, (0, common_1.Body)('name')),
-    __param(1, (0, common_1.Body)('what')),
+    __param(0, (0, common_1.Body)("name")),
+    __param(1, (0, common_1.Body)("what")),
     __param(2, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String]),
@@ -65,14 +66,14 @@ __decorate([
 ], ServicesController.prototype, "updateVaccine", null);
 __decorate([
     (0, common_1.Post)(),
-    __param(0, (0, common_1.Body)('name')),
-    __param(1, (0, common_1.Body)('what')),
+    __param(0, (0, common_1.Body)("name")),
+    __param(1, (0, common_1.Body)("what")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ServicesController.prototype, "addVaccine", null);
 exports.ServicesController = ServicesController = __decorate([
-    (0, common_1.Controller)('services'),
+    (0, common_1.Controller)("services"),
     __metadata("design:paramtypes", [services_service_1.ServicesService])
 ], ServicesController);
 //# sourceMappingURL=services.controller.js.map

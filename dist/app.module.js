@@ -16,7 +16,10 @@ let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [services_module_1.ServicesModule, mongoose_1.MongooseModule.forRoot("mongodb+srv://bharathnagapuri:A8Ey047eVPXRBpRd@cluster0.epqyyl4.mongodb.net/?retryWrites=true&w=majority")],
+        imports: [
+            services_module_1.ServicesModule,
+            mongoose_1.MongooseModule.forRoot("mongodb+srv://bharathnagapuri:A8Ey047eVPXRBpRd@cluster0.epqyyl4.mongodb.net/DB?retryWrites=true&w=majority"),
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
